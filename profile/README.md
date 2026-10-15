@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Sharks-Sharks-Sharks/.github/main/assets/logo.png" alt="Three shark fins cutting through a signal wave" width="220">
-</p>
-
 <h1 align="center">Sharks! Sharks! Sharks!</h1>
 
 <p align="center">
