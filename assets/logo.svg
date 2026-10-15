@@ -12,9 +12,6 @@
       <stop offset="0" stop-color="#0d3a66" stop-opacity="0.85"/>
       <stop offset="1" stop-color="#03060f" stop-opacity="0"/>
     </linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#1d2b4d" stroke-width="1"/>
-    </pattern>
     <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="6" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -23,37 +20,25 @@
   </defs>
 
   <rect width="512" height="512" fill="url(#bg)"/>
-  <rect width="512" height="512" fill="url(#grid)" opacity="0.6"/>
 
-  <!-- under the surface -->
-  <path d="M0 318 Q 32 300 64 318 T 128 318 T 192 318 T 256 318 T 320 318 T 384 318 T 448 318 T 512 318 V512 H0Z" fill="url(#deep)"/>
+  <g transform="translate(0 16)">
+    <path d="M0 318 Q 32 300 64 318 T 128 318 T 192 318 T 256 318 T 320 318 T 384 318 T 448 318 T 512 318 V512 H0Z" fill="url(#deep)"/>
 
-  <!-- three fins: small, medium, large (circuit traces inside) -->
-  <g clip-path="url(#above)" filter="url(#glow)">
-    <path d="M60 322 C 78 280 100 250 128 236 C 124 262 128 296 150 340 L56 340 Z" fill="url(#fin)"/>
-    <path d="M168 322 C 192 262 226 214 268 192 C 260 232 266 284 296 340 L162 340 Z" fill="url(#fin)"/>
-    <path d="M300 322 C 330 238 374 168 432 138 C 420 196 428 266 468 340 L294 340 Z" fill="url(#fin)"/>
-  </g>
-  <g fill="none" stroke="#03203a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#above)">
-    <path d="M100 312 V284 L114 270"/>
-    <circle cx="114" cy="270" r="5" fill="#03203a"/>
-    <path d="M220 312 V262 L246 236"/>
-    <circle cx="246" cy="236" r="6" fill="#03203a"/>
-    <path d="M250 312 V288"/>
-    <circle cx="250" cy="284" r="5" fill="#03203a"/>
-    <path d="M372 312 V246 L408 210"/>
-    <circle cx="408" cy="208" r="7" fill="#03203a"/>
-    <path d="M408 312 V272 L426 254"/>
-    <circle cx="427" cy="253" r="6" fill="#03203a"/>
-  </g>
+    <g clip-path="url(#above)" filter="url(#glow)">
+      <path d="M60 322 C 78 280 100 250 128 236 C 124 262 128 296 150 340 L56 340 Z" fill="url(#fin)"/>
+      <path d="M168 322 C 192 262 226 214 268 192 C 260 232 266 284 296 340 L162 340 Z" fill="url(#fin)"/>
+      <path d="M300 322 C 330 238 374 168 432 138 C 420 196 428 266 468 340 L294 340 Z" fill="url(#fin)"/>
+    </g>
+    <g fill="#03203a" stroke="#03203a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#above)">
+      <path d="M104 330 V286 L116 274" fill="none"/>
+      <circle cx="116" cy="273" r="6"/>
+      <path d="M226 330 V258 L248 236" fill="none"/>
+      <circle cx="249" cy="235" r="7"/>
+      <path d="M380 330 V238 L410 208" fill="none"/>
+      <circle cx="411" cy="207" r="8"/>
+    </g>
 
-  <!-- waterline as a signal trace -->
-  <path d="M0 318 Q 32 300 64 318 T 128 318 T 192 318 T 256 318 T 320 318 T 384 318 T 448 318 T 512 318"
-        fill="none" stroke="#7cf7ff" stroke-width="6" stroke-linecap="round" filter="url(#glow)"/>
-
-  <!-- "sss" in hex, sinking -->
-  <g font-family="JetBrains Mono, Noto Sans Mono, monospace" font-weight="700" text-anchor="middle">
-    <text x="256" y="396" font-size="44" fill="#7cf7ff" opacity="0.9" letter-spacing="4">0x73 73 73</text>
-    <text x="256" y="446" font-size="20" fill="#3d7fb8" opacity="0.8" letter-spacing="6">01110011 ×3</text>
+    <path d="M0 318 Q 32 300 64 318 T 128 318 T 192 318 T 256 318 T 320 318 T 384 318 T 448 318 T 512 318"
+          fill="none" stroke="#7cf7ff" stroke-width="6" stroke-linecap="round" filter="url(#glow)"/>
   </g>
 </svg>
