@@ -5,7 +5,7 @@
 <h1 align="center">Sharks! Sharks! Sharks!</h1>
 
 <p align="center">
-  <code>0x73 73 73</code> &nbsp;·&nbsp; three fins, one tank &nbsp;·&nbsp; 🇩🇰
+  <code>0x73 73 73</code> &nbsp;·&nbsp; three fins, one tank &nbsp;·&nbsp; 🇩🇰 🇩🇪 🇵🇹
 </p>
 
 ---
